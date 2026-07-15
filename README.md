@@ -4,9 +4,8 @@
 Source code for model refinement, validation, and evaluation reported in Wellcome Open Research
 
 ## Contents
-- `model_fitting/` — INLA and hhh4 model specifications
-- `validation/` — time-series cross-validation code
-- `evaluation/` — Brier score, sensitivity/specificity calculation
+- INLA and hhh4 model specifications
+- Brier score, sensitivity/specificity calculation
 
 ## Data
 The dengue surveillance data used with this code are not included and
