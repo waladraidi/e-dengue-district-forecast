@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ensemble Run Guide</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+h1 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+h2 {
+    color: #34495e;
+    margin-top: 30px;
+}
+pre {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #3498db;
+    padding: 15px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+code {
+    background-color: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+}
+</style>
+</head>
+<body>
+
+<h1>Guidelines to Run the Ensemble Code</h1>
+
+<h2>1. Data Preparation</h2>
+<p>Run:</p>
+<pre><code>./Input/Input Data And Cleaning For The Model.R</code></pre>
+
+<h2>2. Model Execution</h2>
+<p>Run these scripts, up to the latest available <code>date.test2</code> (forecasting dates):</p>
+<pre><code>./Model/R/01_call_inla_spacetime.R
+./Model/R/02_call_hhh4.R</code></pre>
+
+<h2>3. Baseline Model</h2>
+<p>Run:</p>
+<pre><code>./Model/R/baseline_inla_method.R</code></pre>
+
+<p>Then:</p>
+<pre><code>./Output/Build_the_ensemble.R
+./Output/fun_threshold_risk_scores.R</code></pre>
+
+<h2>4. Generate Outputs</h2>
+<p>Run:</p>
+<pre><code>./Output/Generate_output_summary_2025.R
+./Output/find_outbreaks.R</code></pre>
+
+</body>
+</html>
